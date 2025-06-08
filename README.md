@@ -4,8 +4,10 @@ This project combines an OWL ontology with SWRL rules and a machine-learning mod
 
 ## Installation
 
+Install the project dependencies using `pip` and the provided requirements file:
+
 ```bash
-pip install owlready2 scikit-learn pandas joblib requests pytest
+pip install -r requirements.txt
 ```
 
 ## Training the Model
