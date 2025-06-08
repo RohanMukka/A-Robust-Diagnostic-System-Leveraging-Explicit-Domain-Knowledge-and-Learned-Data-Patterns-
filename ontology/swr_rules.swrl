@@ -1,0 +1,6 @@
+# SWRL rules for common diseases
+Patient(?p) ^ patient_has_symptom(?p, Fever) ^ patient_has_symptom(?p, Cough) ^ patient_has_symptom(?p, ShortnessOfBreath) -> patient_has_history(?p, Pneumonia)
+Patient(?p) ^ patient_has_symptom(?p, Fever) ^ patient_has_symptom(?p, Chills) ^ patient_has_symptom(?p, Sweating) -> patient_has_history(?p, Malaria)
+Patient(?p) ^ patient_has_symptom(?p, Fever) ^ patient_has_symptom(?p, BodyAche) ^ patient_has_symptom(?p, RunnyNose) -> patient_has_history(?p, Flu)
+Patient(?p) ^ patient_has_test(?p, HighBloodSugar) -> patient_has_history(?p, Diabetes)
+Patient(?p) ^ patient_has_test(?p, HighBloodPressure) -> patient_has_history(?p, Hypertension)
