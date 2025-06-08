@@ -55,6 +55,22 @@ def ml_diagnosis(symptoms):
     return pred
 
 
+def diagnose(symptoms, tests):
+    """Run diagnosis using rules then ML fallback."""
+    onto = load_ontology()
+    diseases = run_reasoner(onto, symptoms, tests)
+    if diseases:
+        return {
+            'method': 'rule',
+            'diseases': [d.name for d in diseases]
+        }
+    pred = ml_diagnosis(symptoms)
+    return {
+        'method': 'ml',
+        'disease': pred
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description='Diagnostic CLI')
     parser.add_argument('--symptoms', required=True, help='Comma separated symptoms')
@@ -68,13 +84,11 @@ def main():
             k,v = pair.split('=',1)
             tests[k.strip()] = v.strip()
 
-    onto = load_ontology()
-    diseases = run_reasoner(onto, symptoms, tests)
-    if diseases:
-        print('Rule-based diagnosis:', ', '.join(d.name for d in diseases))
+    result = diagnose(symptoms, tests)
+    if result['method'] == 'rule':
+        print('Rule-based diagnosis:', ', '.join(result['diseases']))
     else:
-        pred = ml_diagnosis(symptoms)
-        print('ML-based diagnosis:', pred)
+        print('ML-based diagnosis:', result['disease'])
 
 
 if __name__ == '__main__':
