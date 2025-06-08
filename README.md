@@ -37,3 +37,9 @@ Edit `ontology/swr_rules.swrl` and add new rules in standard SWRL syntax. They w
 ```bash
 pytest
 ```
+
+## Contributors
+
+- Puttabanthi Akhil - 20B81A05J6
+- Mukka Rohan - 20B81A05M3
+- Shaik Samad Rizwan - 20B81A0
