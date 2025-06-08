@@ -1,4 +1,4 @@
-# Robust Diagnostic System
+# A Robust Diagnostic System Leveraging Explicit Domain Knowledge and Learned Data Patterns 
 
 This project combines an OWL ontology with SWRL rules and a machine-learning model for disease diagnosis.
 
