@@ -1,4 +1,4 @@
-# Robust Diagnostic System
+# A Robust Diagnostic System Leveraging Explicit Domain Knowledge and Learned Data Patterns 
 
 This project combines an OWL ontology with SWRL rules and a machine-learning model for disease diagnosis.
 
@@ -38,6 +38,7 @@ Edit `ontology/swr_rules.swrl` and add new rules in standard SWRL syntax. They w
 pytest
 ```
 
+
 ## Deploying on Vercel
 
 Create a Vercel project and push this repository. The serverless API in
@@ -51,3 +52,9 @@ curl -G https://your-vercel-deployment.vercel.app/api/diagnose \
 ```
 
 The response will contain either the rule-based or machine-learning diagnosis.
+
+## Contributors
+
+- Puttabanthi Akhil - 20B81A05J6
+- Mukka Rohan - 20B81A05M3
+- Shaik Samad Rizwan - 20B81A0
