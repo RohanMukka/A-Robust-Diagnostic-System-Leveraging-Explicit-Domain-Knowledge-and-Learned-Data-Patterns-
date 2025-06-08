@@ -38,6 +38,21 @@ Edit `ontology/swr_rules.swrl` and add new rules in standard SWRL syntax. They w
 pytest
 ```
 
+
+## Deploying on Vercel
+
+Create a Vercel project and push this repository. The serverless API in
+`api/diagnose.py` exposes a `/api/diagnose` endpoint. Vercel automatically
+installs `requirements.txt` and serves the Flask app. Pass symptoms and optional
+tests via JSON or query parameters:
+
+```bash
+curl -G https://your-vercel-deployment.vercel.app/api/diagnose \
+    --data-urlencode "symptoms=Fever,Cough"
+```
+
+The response will contain either the rule-based or machine-learning diagnosis.
+
 ## Contributors
 
 - Puttabanthi Akhil - 20B81A05J6

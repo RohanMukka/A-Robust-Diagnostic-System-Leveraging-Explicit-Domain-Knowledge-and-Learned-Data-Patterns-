@@ -1,0 +1,6 @@
+flask
+owlready2
+scikit-learn
+pandas
+joblib
+requests
