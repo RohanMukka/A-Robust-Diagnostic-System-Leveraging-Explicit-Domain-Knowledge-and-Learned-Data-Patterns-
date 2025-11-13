@@ -59,4 +59,4 @@ The response will contain either the rule-based or machine-learning diagnosis.
 
 - Puttabanthi Akhil - 20B81A05J6
 - Mukka Rohan - 20B81A05M3
-- Shaik Samad Rizwan - 20B81A0
+- Shaik Samad Rizwan - 20B81A05N0
